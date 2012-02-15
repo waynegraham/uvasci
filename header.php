@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" <?php	 	 language_attributes(); ?>>
+<html xmlns="http://www.w3.org/1999/xhtml" <?php		 language_attributes(); ?>>
 <head profile="http://gmpg.org/xfn/11">
 <meta http-equiv="Content-Type" content="<?php	 	 bloginfo('html_type'); ?>; charset=<?php	 	 bloginfo('charset'); ?>" />
 
@@ -14,8 +14,7 @@
  
 } else if ( is_author() ) {
       bloginfo('name');
-      wp_title('| Archive for ');	  
-	  
+      wp_title('| Archive for ');
 } else if ( is_archive() ) {
       bloginfo('name');
       echo ('| Archive for ');
@@ -28,14 +27,13 @@
 } else if ( is_404() ) {
       bloginfo('name');
       echo (' | 404 Error (Page Not Found)');
-	  
 } else if ( is_home() ) {
       bloginfo('name');
  
 } else {
       bloginfo('name');
       echo ('| ');
-      echo (''.$blog_longd.'');
+      echo (''. $blog_longd . '');
 }
  ?></title>
 	
@@ -51,7 +49,7 @@
 <meta name="keywords" content="<?php	 	 bloginfo('description'); ?>" />
 <?php	 	 } ?>
 
-<link rel="stylesheet" href="/css/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 
 <link rel="alternate" type="application/rss+xml" title="<?php	 	 bloginfo('name'); ?> RSS Feed" href="<?php	 	 bloginfo('rss2_url'); ?>" />
 <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="<?php	 	 bloginfo('atom_url'); ?>" />
@@ -81,24 +79,25 @@
 </style>
 </head>
 
-<body<?php	 	 if (is_home()) { ?> id="home"<?php	 	 } else { ?> class="page-<?php	 	 echo $post->post_name; ?> <?php	 	 include($_SERVER['DOCUMENT_ROOT'] . '/includes/body_class.inc.php'); ?>" id="interior"<?php	 	 } ?>>
+<body<?php	 	 if (is_home()) { ?> id="home"<?php	 	 } else { ?> class="page-<?php	 	 echo $post->post_name; ?> 
+<?php	 	 include('includes/body_class.inc.php'); ?>" id="interior"<?php	 	 } ?>>
 
 <div id="wrapper">
 
 	<div class="clearfloat">
-		<a id="logo" class="left" href="/" title="Back Home">Scholarly Communication Institute</a>
-		<a href="http://www.lib.virginia.edu/"><img src="/images/logo_uva.gif" alt="uva" class="right" /></a>
+  <a id="logo" class="left" href="<?php bloginfo('wpurl'); ?>" title="Back Home">Scholarly Communication Institute</a>
+    <a href="http://www.lib.virginia.edu/"><img src="<?php bloginfo('template_directory'); ?>/images/logo_uva.gif" alt="uva" class="right" /></a>
 	</div>
 
 	<div id="masthead" class="clearfloat">
 		
 		<?php	 	 if (is_home()) { ?>
-			<p style="margin-top: 0; margin-bottom: 0;"><img src="/images/tagline.gif" alt="tagline" align="left" /><span class="rounded_text">&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+			<p style="margin-top: 0; margin-bottom: 0;"><img src="<?php bloginfo('template_directory'); ?>/images/tagline.gif" alt="tagline" align="left" /><span class="rounded_text">&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
 		
 		<?php	 	 } else { ?>
 			<ul id="top_nav" class="right">
 				<?php	 	 wp_list_pages('sort_column=menu_order&title_li=&exclude=3,4,5,6,20,51&depth=1'); ?>
-				<li><a href="/" title="Home">Home</a></li>
+<li><a href="<?php bloginfo('wpurl'); ?>" title="Home">Home</a></li>
 			</ul>
 		<?php	 	 } ?>
 		

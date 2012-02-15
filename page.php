@@ -1,4 +1,10 @@
 <?php	 	 get_header(); ?>
+
+<?php
+// eat errors:
+  $secondarynav = '';
+  $tertiarynav = '';
+?>
   
 <?php	 	
 	if($post->ID) { // making sure stuff exists - probably not necessary for our purposes, but we'll make sure
@@ -6,7 +12,6 @@
 		if($post->post_parent) { // page is a child
 		
 			// get this party started
-                            
 			$parent = get_post($post->post_parent);
 						   
 			if($parent->post_parent) { // if page is a grandchild
@@ -101,7 +106,6 @@
 					<?php	 	 echo $tertiarynav; ?>
 				   </ul>
 				<?php	 	 } ?>
-			   
 				<?php	 	 query_posts('pagename=/sidebars/'.$post->post_name.'-sidebar'); ?>
 				<?php	 	 while ( have_posts() ) : the_post(); ?>
 					<?php	 	 the_content(); ?>

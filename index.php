@@ -1,3 +1,5 @@
+<!-- /news/%year%/%monthnum%/%day%/%postname%/ -->
+
 <?php	 	 get_header(); ?>
 
 <!--CONTENT-->
@@ -85,4 +87,4 @@
 
 
 
-<? include($_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'); ?>
+<? include('footer.php'); ?>
