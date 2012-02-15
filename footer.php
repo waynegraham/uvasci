@@ -4,7 +4,7 @@
 
 <img src="<?php bloginfo('template_directory') ?>/images/80x15.png" /> Scholarly Communication Institute
 		<br />
-		P.O. Box 400113, Charlottesville, Va 22903 | <a href="/contact/">Contact</a>
+    P.O. Box 400113, Charlottesville, Va 22903 | <a href="<?php bloginfo('wpurl'); ?>/contact/">Contact</a>
 </div>
 
 </div><!--END WRAPPER-->
