@@ -43,7 +43,7 @@ Template Name: news
 	<?php	 	 else : ?>
 
 		<h4 class="center">Not Found</h4>
-		<?php	 	 include (TEMPLATEPATH . '/searchform.php'); ?>
+		<?php	 	 include ('searchform.php'); ?>
 
 	<?php	 	 endif; ?>
 

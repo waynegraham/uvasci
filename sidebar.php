@@ -18,7 +18,7 @@
 					</ul>
 					
 					<h5>Search</h5>
-					<?php	 	 include (TEMPLATEPATH . '/searchform.php'); ?>
+					<?php	 	 include ( 'searchform.php'); ?>
 
 				<?php	 	 endif; ?>
 				 
